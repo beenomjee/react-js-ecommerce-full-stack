@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "src": "/assets/(.*)",
+            "dest": "assets/$1"
+        },
+        {
+            "src": "/hero/(.*)",
+            "dest": "hero/$1"
+        },
+        {
+            "src": "/icons/(.*)",
+            "dest": "icons/$1"
+        },
+        {
+            "src": "/touch/(.*)",
+            "dest": "touch/$1"
+        },
+        {
+            "src": "/imgs/(.*)",
+            "dest": "imgs/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "index.html"
+        }
+    ]
+}

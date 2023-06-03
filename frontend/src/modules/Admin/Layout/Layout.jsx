@@ -29,7 +29,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         <div className={`${styles.sidebar}`} ref={ref}>
             <h2><NavLink to="/">Avion</NavLink></h2>
             <div className={styles.info}>
-                <img src="/admin/avatar.png" alt="avatar" />
+                <img src="/imgs/admin/avatar.png" alt="avatar" />
                 <span>{user?.name}</span>
                 <span>Admin</span>
             </div>
