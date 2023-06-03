@@ -1,0 +1,52 @@
+:root {
+  --dark-primary: 42, 37, 75;
+  --primary: 78, 77, 147;
+  --secondary: 108, 117, 125;
+  --success: 40, 167, 69;
+  --danger: 220, 53, 69;
+  --warning: 255, 193, 7;
+  --info: 23, 162, 184;
+  --light: 248, 249, 250;
+  --dark: 52, 58, 64;
+  --link: 0, 123, 255;
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+  --light-gray: 232, 232, 232;
+  --light-gray-2: 249, 249, 249;
+  --border-gray: 235, 232, 245;
+  --border-dark: 202, 198, 218;
+}
+
+// Colors
+$dark-primary: var(--dark-primary);
+$primary: var(--primary);
+$secondary: var(--secondary);
+$success: var(--success);
+$danger: var(--danger);
+$warning: var(--warning);
+$info: var(--info);
+$light: var(--light);
+$dark: var(--dark);
+$link: var(--link);
+$white: var(--white);
+$black: var(--black);
+$light-gray: var(--light-gray);
+$light-gray-2: var(--light-gray-2);
+$border-gray: var(--border-gray);
+$border-dark: var(--border-dark);
+
+$shadow-color: rgba(
+  $color: $black,
+  $alpha: 0.1,
+);
+// Spacing
+$spacing: 0.4rem;
+
+// transition
+$transition-duration: 0.25s;
+
+// Breakpoints
+$mobile-breakpoint: 580px;
+$tablet-breakpoint: 800px;
+$desktop-breakpoint: 990px;
+$l-desktop-breakpoint: 1280px;

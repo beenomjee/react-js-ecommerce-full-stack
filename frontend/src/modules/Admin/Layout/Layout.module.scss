@@ -1,0 +1,108 @@
+@import "../../../styles";
+
+.container {
+  @include flex(row, stretch, flex-start);
+  height: 100vh;
+
+  & > .left {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba($color: #ededf4, $alpha: 1);
+    width: 270px;
+    @include tablet {
+      @include position(fixed, 0, -270px, unset, 0);
+      z-index: 15;
+      transition: left 400ms ease-in-out;
+
+      &.open {
+        left: 0;
+      }
+    }
+  }
+  & > .right {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.sidebar {
+  @include flex(column, center);
+  position: relative;
+  height: 100%;
+
+  & > h2 {
+    text-align: center;
+    padding: 2rem 0 5rem;
+    font-size: 24px;
+    line-height: 30px;
+    color: #22202e;
+  }
+  & > .info {
+    @include flex(column, center);
+
+    & > img {
+      @include avatar(120px);
+    }
+
+    & > span:nth-of-type(1) {
+      padding: 10px 0 5px;
+      font-size: 17px;
+      color: #22202e;
+    }
+
+    & > span:nth-of-type(2) {
+      font-size: 14px;
+      color: rgba($color: $dark-primary, $alpha: 1);
+      font-family: "Poppins";
+      font-weight: 600;
+      color: rgba($color: $primary, $alpha: 1);
+    }
+  }
+  & > .nav {
+    flex: 1;
+    @include flex(column, center, flex-start, 10px);
+    padding: 30px 0 10px;
+
+    & > a {
+      width: 130px;
+      padding: 10px;
+      @include flex(row, stretch, space-between, 10px);
+      @include font(14px, 400, 1);
+
+      & > span:nth-of-type(1) {
+        flex: 2;
+        display: block;
+        text-align: right;
+      }
+      & > span:nth-of-type(2) {
+        flex: 8;
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+  & > button {
+    @include reset();
+    margin-bottom: 10px;
+    @include flex(row, center, center, 10px);
+  }
+
+  & > .arrow {
+    @include position(fixed, 10px, 0);
+    transform: translate(-20%, 0);
+    z-index: 20;
+    background-color: rgba($color: $dark-primary, $alpha: 1);
+    color: rgba($color: $white, $alpha: 1);
+    width: 25px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 5px;
+    transition: left 400ms ease-in-out, transform 400ms ease-in-out;
+
+    &.open {
+      left: 270px;
+      transform: translate(-50%, 0) rotate(180deg);
+    }
+  }
+}

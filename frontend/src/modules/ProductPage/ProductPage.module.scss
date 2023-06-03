@@ -1,0 +1,141 @@
+@import "../../styles";
+
+.wrapper {
+  background-color: rgba($color: $light-gray-2, $alpha: 1);
+
+  @include tablet {
+    background-color: rgba($color: $white, $alpha: 1);
+  }
+
+  .container {
+    @include maxWidth();
+    @include flex(row, stretch, space-between, 6rem);
+    padding: 5rem 0;
+
+    @include tablet {
+      max-width: unset;
+      width: unset;
+      flex-direction: column;
+      padding-top: 0;
+    }
+
+    & > * {
+      flex: 1;
+    }
+
+    & > .left > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    & > .right {
+      padding: 3rem 0;
+
+      @include tablet {
+        @include maxWidth();
+      }
+
+      & > h1 {
+        font-size: 36px;
+        line-height: 44px;
+        color: #2a254b;
+      }
+      & > span {
+        font-family: "Satoshi";
+        font-size: 24px;
+        line-height: 32px;
+        color: #2a254b;
+      }
+
+      & > .line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba($color: #ebe8f4, $alpha: 1);
+        margin: 25px 0;
+      }
+
+      & > h5 {
+        font-size: 16px;
+        line-height: 20px;
+        color: #2a254b;
+      }
+
+      & > p {
+        font-family: "Satoshi";
+        font-size: 16px;
+        line-height: 22px;
+        color: #2a254b;
+        padding-top: 1.4rem;
+      }
+
+      & > .dimension {
+        padding-top: 3rem;
+      }
+
+      & > .box {
+        @include flex(row, stretch, flex-start, 5rem);
+        padding-top: 2.4rem;
+
+        & > div {
+          &.line {
+            width: 1px;
+            background-color: rgba($color: #ebe8f4, $alpha: 1);
+          }
+          & > h6 {
+            font-size: 14px;
+            line-height: 17px;
+            color: #2a254b;
+            padding-bottom: 1.5rem;
+          }
+          & > span {
+            font-family: "Satoshi";
+            font-size: 16px;
+            line-height: 22px;
+            color: #2a254b;
+          }
+        }
+      }
+
+      & > .quantityHeading {
+        padding-top: 4rem;
+      }
+
+      & > .quantity {
+        padding-top: 1.2rem;
+
+        & > button,
+        & > span {
+          @include reset(true);
+          padding: 1.2rem 1.6rem;
+          background-color: rgba($color: $white, $alpha: 1);
+          font-family: "Satoshi";
+          font-size: 16px;
+          line-height: 22px;
+          color: #ebe8f4;
+
+          &:hover {
+            color: rgba($color: #2a254b, $alpha: 0.5);
+          }
+        }
+
+        & > span {
+          cursor: default;
+          color: rgba($color: #2a254b, $alpha: 1);
+        }
+      }
+
+      & > button {
+        @include reset(true);
+        background: #2a254b;
+        margin-top: 5rem;
+        padding: 1.6rem 3.2rem;
+        font-family: "Satoshi";
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba($color: $white, $alpha: 1);
+      }
+    }
+  }
+}

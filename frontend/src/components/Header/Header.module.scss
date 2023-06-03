@@ -1,0 +1,61 @@
+@import "../../styles";
+
+.header {
+  width: 100%;
+
+  & > .top {
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+    @include flex(row, center, space-between);
+    padding: 2rem 1rem;
+    border-bottom: 1px solid rgba($color: $black, $alpha: 0.1);
+
+    & > h6 {
+      font-size: 24px;
+      line-height: 30px;
+      color: #22202e;
+    }
+
+    & > .buttons {
+      @include flex(row, center, flex-end, 1.6rem);
+      & > a,
+      & > button {
+        position: relative;
+        @include reset();
+        & > img {
+          @include icon();
+        }
+      }
+
+      & > a.cart::after {
+        content: attr(data-no-of-items);
+        @include position(absolute, -10px, unset, -10px);
+        background-color: rgba($color: $danger, $alpha: 1);
+        box-sizing: border-box;
+        padding: 5px;
+        border-radius: 50%;
+        width: 20px;
+        aspect-ratio: 1/1;
+        @include center();
+        color: rgba($color: $white, $alpha: 1);
+        font-size: 1rem;
+      }
+    }
+  }
+
+  & > .bottom {
+    width: 100%;
+    max-width: 95vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    @include flex(row, center, center, 4.4rem);
+    overflow-x: scroll;
+    @include hideScrollbar();
+    & > a {
+      font-size: 16px;
+      line-height: 22px;
+      color: rgb($dark-primary);
+    }
+  }
+}

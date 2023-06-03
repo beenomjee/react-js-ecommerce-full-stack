@@ -1,0 +1,12 @@
+export { default as Loader } from "./Loader/Loader";
+export { default as ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";
+export { default as Layout } from "./Layout/Layout";
+export { default as Slide } from "./Slide/Slide";
+export { default as Product } from "./Product/Product";
+export { default as NotLoggedInRoute } from "./NotLoggedInRoute/NotLoggedInRoute";
+export { default as Club } from "./Club/Club";
+export { default as Footer } from "./Footer/Footer";
+export { default as Header } from "./Header/Header";
+export { default as Search } from "./Search/Search";
+export { default as Touch } from "./Touch/Touch";
+export { default as AdminRoute } from "./AdminRoute/AdminRoute";

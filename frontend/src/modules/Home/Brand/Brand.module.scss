@@ -1,0 +1,55 @@
+@import "../../../styles";
+
+.container {
+  @include maxWidth();
+  padding: 6rem 0;
+
+  & > h2 {
+    font-size: 24px;
+    line-height: 140%;
+    color: #2a254b;
+    text-align: center;
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  & > .cards {
+    @include flex(row, stretch, space-between, 5rem);
+    padding: 5rem 0 2rem;
+
+    @include l-desktop {
+      flex-wrap: wrap;
+
+      & > * {
+        flex-basis: 45%;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      flex-basis: 1;
+    }
+  }
+}
+
+.card {
+  & > img {
+    @include icon(24px);
+  }
+
+  & > h6 {
+    font-size: 20px;
+    line-height: 140%;
+    color: #2a254b;
+    margin: 1.6rem 0 0.8rem;
+  }
+
+  & > p {
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 150%;
+    color: #2a254b;
+  }
+}

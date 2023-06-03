@@ -1,0 +1,8 @@
+@import "../../styles";
+
+.container {
+  min-height: 100vh;
+  font-size: 4rem;
+  @include center();
+  color: #2a254b;
+}

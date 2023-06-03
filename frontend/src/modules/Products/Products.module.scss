@@ -1,0 +1,61 @@
+@import "../../styles";
+
+.wrapper {
+  background-image: url("/hero/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    @include maxWidth();
+    height: 209px;
+    padding: 3.6rem 0;
+    @include flex(column, stretch, flex-end);
+
+    & > h1 {
+      font-size: 36px;
+      line-height: 140%;
+      color: rgba($color: $white, $alpha: 1);
+    }
+  }
+}
+
+.container2 {
+  @include maxWidth();
+
+  @include flex(row, stretch, center, 20px, wrap);
+  padding: 3rem 0;
+
+  & > p {
+    font-family: "Satoshi";
+    font-size: 16px;
+  }
+}
+
+.center {
+  @include center();
+  padding: 3rem 0;
+
+  & > button {
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 150%;
+    color: #2a254b;
+    width: 170px;
+    height: 56px;
+    background: rgba($color: $light-gray-2, $alpha: 1);
+    @include center();
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($color: $border-gray, $alpha: 1);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: rgba($color: $light-gray-2, $alpha: 1);
+    }
+  }
+}

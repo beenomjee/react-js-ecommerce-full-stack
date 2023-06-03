@@ -1,0 +1,121 @@
+@import "../../styles";
+
+.wrapper {
+  background-color: rgba($color: $dark-primary, $alpha: 1);
+  .container {
+    @include maxWidth();
+
+    & > .top {
+      padding: 6rem 0 5rem;
+      @include flex(row, stretch);
+      @include tablet {
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      //   for all
+      & > * {
+        flex: 1;
+      }
+
+      & h6 {
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba($color: $white, $alpha: 1);
+        margin-bottom: 1.2rem;
+      }
+      //   for all end
+
+      & > .left {
+        @include flex(row, stretch, center, 3rem);
+
+        @include tablet {
+          flex-wrap: wrap;
+        }
+
+        & > * {
+          flex: 1;
+          @include flex(column, flex-start, flex-start, 1.2rem);
+
+          @include tablet {
+            min-width: 40vw;
+          }
+
+          & > a {
+            font-family: "Satoshi";
+            font-size: 14px;
+            line-height: 19px;
+            color: rgba($color: $white, $alpha: 1);
+
+            &:hover {
+              color: rgba($color: $white, $alpha: 0.7);
+            }
+          }
+        }
+      }
+
+      & > .right > .input {
+        height: 56px;
+        @include flex(row, flex-start, flex-start);
+
+        & > input {
+          width: 75%;
+          height: 100%;
+          @include reset();
+          background: rgba(255, 255, 255, 0.15);
+          cursor: text;
+          padding: 0rem 3.2rem;
+          font-family: "Satoshi";
+          font-size: 16px;
+          line-height: 22px;
+          color: rgba($color: $white, $alpha: 1);
+        }
+        & > button {
+          width: 25%;
+          height: 100%;
+          @include reset();
+          background: rgba($color: $white, $alpha: 1);
+          font-family: "Satoshi";
+          font-size: 16px;
+          line-height: 150%;
+          color: #2a254b;
+        }
+      }
+    }
+
+    & > .bottom {
+      padding: 22px 0;
+      border-top: 1px solid #4e4d93;
+      @include flex(row, center, space-between);
+
+      @include mobile {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      & > p {
+        font-family: "Satoshi";
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba($color: $white, $alpha: 1);
+
+        & > a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      & > .right {
+        @include flex(row, center, flex-end, 2.4rem);
+
+        & > a {
+          color: rgba($color: $white, $alpha: 1);
+
+          & > img {
+            width: 24px;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
+  }
+}

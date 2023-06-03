@@ -1,0 +1,65 @@
+@import "../../../styles";
+
+.container {
+  @include maxWidth();
+  margin: 6rem auto;
+  background-color: rgba($color: $dark-primary, $alpha: 1);
+  @include flex(row, stretch, space-between, 7rem);
+
+  & > .left {
+    @include flex(column, stretch, space-between, 80px);
+    padding: 6rem;
+
+    & > .top {
+      & > h1 {
+        font-family: "Clash Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 140%;
+        color: rgba($color: $white, $alpha: 1);
+        max-width: 450px;
+      }
+    }
+
+    & > .bottom {
+      font-family: "Satoshi";
+      font-size: 18px;
+      line-height: 150%;
+      color: rgba($color: $white, $alpha: 1);
+    }
+  }
+
+  & > img {
+    max-width: 40vw;
+    aspect-ratio: 496 / 557;
+    object-fit: cover;
+    object-position: bottom;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  //   for both
+  & a {
+    padding: 16px 32px;
+    background: rgba(249, 249, 249, 0.15);
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba($color: $white, $alpha: 1);
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+
+    &:hover {
+      background: rgba(249, 249, 249, 0.2);
+    }
+
+    @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

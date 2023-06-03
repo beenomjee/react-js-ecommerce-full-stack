@@ -1,0 +1,49 @@
+@import "../../../styles";
+
+.container {
+  & > h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: rgba($color: $dark, $alpha: 1);
+  }
+
+  & > form {
+    @include flex(column, stretch, flex-start, 20px);
+    padding: 20px;
+
+    & > label {
+      & > span {
+        display: block;
+        @include font(14px, 400, 1.5, "Satoshi");
+        margin-bottom: 3px;
+        color: rgba($color: $dark, $alpha: 1);
+      }
+
+      & > input,
+      & > textarea {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        border: 1px solid rgba($color: $primary, $alpha: 0.3);
+        background-color: rgba($color: $light-gray-2, $alpha: 1);
+        margin-bottom: 3px;
+        outline: none;
+      }
+
+      & > textarea {
+        height: 10rem;
+        resize: none;
+      }
+    }
+
+    & > button {
+      width: 200px;
+      padding: 15px;
+      @include reset();
+      background-color: rgba($color: $dark-primary, $alpha: 1);
+      color: rgba($color: $white, $alpha: 1);
+      font-size: 14px;
+      font-family: "Satoshi";
+    }
+  }
+}

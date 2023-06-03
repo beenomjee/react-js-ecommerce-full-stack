@@ -1,0 +1,86 @@
+@import "../../styles";
+
+.container {
+  position: relative;
+  @include flex(row, stretch, flex-end);
+
+  @include query(1350px) {
+    justify-content: space-between;
+    gap: 10rem;
+    max-width: 97.5vw;
+    margin-left: auto;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    max-width: unset;
+    width: 100%;
+    gap: 0;
+  }
+
+  & > .overlay {
+    @include position(absolute, 0, unset, calc(50% + 10rem), 0);
+    z-index: 1;
+    max-width: 536px;
+    @include flex(column, stretch);
+    padding: 7rem 0rem 5rem;
+
+    @include query(1350px) {
+      position: static;
+    }
+
+    @include tablet {
+      max-width: 95vw;
+      width: 570px;
+      padding-left: 2.5rem;
+    }
+
+    & > .text {
+      & > h2 {
+        font-size: 24px;
+        line-height: 140%;
+        color: #2a254b;
+      }
+
+      & > p {
+        padding-top: 1.5rem;
+        font-family: "Satoshi";
+        font-size: 16px;
+        line-height: 22px;
+        color: #505977;
+
+        @include tablet {
+          padding-top: 2.5rem;
+        }
+      }
+    }
+
+    & > button {
+      font-family: "Satoshi";
+      font-size: 16px;
+      line-height: 150%;
+      color: #2a254b;
+      @include reset(true);
+      background-color: rgba($color: $light-gray-2, $alpha: 1);
+      padding: 16px 32px;
+      width: fit-content;
+      margin-top: 10rem;
+
+      &:hover {
+        background-color: rgba($color: $border-gray, $alpha: 1);
+      }
+    }
+  }
+
+  & > img {
+    width: 50%;
+    height: 600px;
+    object-position: center;
+    object-fit: cover;
+
+    @include tablet {
+      width: 100%;
+      height: unset;
+    }
+  }
+}

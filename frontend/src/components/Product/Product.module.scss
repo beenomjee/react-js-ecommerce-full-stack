@@ -1,0 +1,28 @@
+@import "../../styles";
+
+.product {
+  & > * {
+    user-select: none;
+  }
+  & > img {
+    width: 300px;
+    aspect-ratio: 300/ 370;
+    max-width: 80vw;
+    object-fit: cover;
+    position: center center;
+  }
+
+  & > h6 {
+    font-size: 20px;
+    line-height: 140%;
+    color: #2a254b;
+    padding: 1.6rem 0 0.8rem;
+  }
+
+  & > span {
+    font-family: "Satoshi";
+    font-size: 18px;
+    line-height: 150%;
+    color: #2a254b;
+  }
+}

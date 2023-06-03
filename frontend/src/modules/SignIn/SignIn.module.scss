@@ -1,0 +1,81 @@
+@import "../../styles";
+
+.center {
+  @include center();
+  min-height: 100vh;
+
+  & > .box {
+    background-color: rgba($color: $light-gray-2, $alpha: 1);
+    border-radius: 1rem;
+    padding: 5rem 5rem 7rem;
+    @include flex(column, stretch, flex-start, 1rem);
+    width: 450px;
+    max-width: 95vw;
+
+    & > h1 {
+      text-align: center;
+      font-size: 32px;
+      line-height: 39px;
+      color: #2a254b;
+      margin-bottom: 3rem;
+    }
+
+    & > label {
+      margin-bottom: 10px;
+      & > span {
+        display: block;
+        font-size: 16px;
+        line-height: 20px;
+        color: #505977;
+        margin-bottom: 5px;
+      }
+
+      & > input {
+        line-height: 1;
+        border: 1px solid rgba($color: #505977, $alpha: 0.3);
+        outline: none;
+        background-color: transparent;
+        padding: 1rem 2.2rem;
+        font-family: "Satoshi";
+        font-size: 16px;
+        line-height: 22px;
+        color: #505977;
+        width: 100%;
+        border-radius: 1000rem;
+
+        &:hover,
+        &:focus {
+          outline: 2px solid #845ef1;
+        }
+      }
+
+      & > p {
+        font-family: "Satoshi";
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba($color: $danger, $alpha: 1);
+      }
+    }
+
+    & > button,
+    & > a {
+      @include reset(true);
+      line-height: 1;
+      border: 1px solid rgba($color: #505977, $alpha: 0.3);
+      outline: none;
+      background-color: transparent;
+      padding: 1rem 2.2rem;
+      font-family: "Satoshi";
+      font-size: 16px;
+      line-height: 22px;
+      color: #505977;
+      width: 100%;
+      border-radius: 1000rem;
+    }
+
+    & > button {
+      background-color: #845ef1;
+      color: rgba($color: $white, $alpha: 1);
+    }
+  }
+}
