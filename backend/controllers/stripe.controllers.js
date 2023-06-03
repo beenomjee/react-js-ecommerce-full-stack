@@ -17,7 +17,7 @@ export const initiatePayment = async (req, res) => {
       temp.push({
         name: product.name,
         description: product.description,
-        unit_amount: product.price * quantity * 100,
+        unit_amount: product.price * 100,
         quantity,
         id: product._id,
       });
